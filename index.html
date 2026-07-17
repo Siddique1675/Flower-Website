@@ -1,6 +1,26 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <script>
+      (function() {
+        var originalFetch = window.fetch;
+        var customFetch = null;
+        try {
+          Object.defineProperty(window, 'fetch', {
+            get: function() {
+              return customFetch || originalFetch;
+            },
+            set: function(val) {
+              customFetch = val;
+            },
+            configurable: true,
+            enumerable: true
+          });
+        } catch (e) {
+          console.warn("Could not redefine window.fetch", e);
+        }
+      })();
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flower Blog | Botanical Anthology & AI Lore</title>
