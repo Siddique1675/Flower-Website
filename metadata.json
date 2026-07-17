@@ -1,0 +1,6 @@
+{
+  "name": "Flower Blog",
+  "description": "An editorial botanical journal and interactive AI flower companion. Explore beautiful flora, create custom garden stories, and get tailored care guides.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
